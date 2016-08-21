@@ -1,0 +1,92 @@
+Projekt č. 1:
+Vytvořte v LaTeXu dokument, který co nejvíce odpovídá vzorovému dokumentu. Při řešení lze použít jeho textovou verzi (iso-8859-2), která obsahuje i bližší specifikaci použitého formátu (rozměry, velikost fontů, atd.). Projekt zadává, konzultuje a hodnotí David Martinek.
+
+V maximální míře využijte LaTeX (použijte latex/pdflatex + babel + program vlna, cslatex již nepoužívejte) a jeho příkazy (např. příkaz \maketitle). Problém s překladem příkazu \uv na školních počítačích můžete řešit pomocí souboru csprimes.tex - v takovém případě tento soubor také odevzdejte, nebo si příkaz sami definujte pomocí makra: \newcommand{\uv}[1]{\quotedblbase #1\textquotedblleft} . Převod z formátu .tex do .pdf provádějte na školním serveru MERLIN. Pro překlad můžete použít latex + dvips -t a4 + ps2pdf nebo pdflatex (produkuje ale větší soubory). Nezapomeňte přiložit Makefile, protože nepřeložitelné projekty budou hodnoceny 0 body. Případné dotazy směřujte na diskusní fórum předmětu.
+
+Základní informace o dokumentu
+------------------------------
+rozmìry stránky: A4
+rozmìry textové oblasti: 18x25cm
+mezera vlevo: 1.5cm
+mezera nahoøe: 2.5cm
+font: standardní 10pt (vzorový dokument pouŸívá kódování fontù T1)
+sazba na dva sloupce: parametr twocolumn dokumentové tøídy article
+
+Upøesnìní
+---------
+- Jméno, Pøíjmení a e-mail autora v textu nahraïte svými vlastními údaji podle vzoru naznaèeného v èásti Text dokumentu.
+- Pomlèky a spojovníky jsou v tomto textu zadány znakem -. V dokumentu musí být správná ¹íøka pomlèek, spojovníkù a mezer podle kontextu.
+- V tomto textu jsou pouŸity tyto "dvojité uvozovky". Ve výsledném dokumentu musí být uvozovky podle zadaného PDF.
+- Pomocí dvou otazníkù ?? jsou vyznaèena místa, kam je potøeba doplnit správnou hodnotu odkazu.
+- V tomto dokumentu jsou odkazovány externí zdroje informací v poznámkách pod èarou. Tento zpùsob odkazování lze pouŸít jen pro opravdu malé dokumenty. LaTeX má vlastní standardní prostøedky pro vytváøení seznamù pouŸité literatury a pro odkazování na poloŸky v tomto seznamu. Tímto zpùsobem se øe¹í i odkazování na webové stránky. Této problematice bude vìnována jedna celá pøedná¹ka a samostatný projekt.
+- Problém se sazbou èeských uvozovek na ¹kolním serveru merlin lze øe¹it pomocí souboru http://www.root.cz/data/latex/csprimes.tex nebo si sami sami definujte makro \newcommand{\uv}[1]{\quotedblbase #1\textquotedblleft}
+
+- Vzorový dokument byl vysázen LaTeXem na ¹kolním serveru merlin tìmito nástroji:
+  latex
+  dvips -t a4
+  ps2pdf
+  
+  Pøi pouŸití pdflatexu je výsledný soubor vizuálnì totoŸný, ale je dvakrát vìt¹í.
+
+Text dokumentu
+--------------
+
+Typografická etiketa
+Vysázel: Jméno Pøíjmení
+xlogin00@stud.fit.vutbr.cz
+
+
+Hladká sazba
+
+Hladká sazba pouŸívá jeden stupeò, druh a øez písma a je sázena na stanovenou ¹íøku odstavce. Je sloŸena z odstavcù, obvykle zaèínajících zaráŸkou, nejde-li o první odstavec za nadpisem. Mohou ale být sázeny i bez zaráŸky - rozhodující je celková grafická úprava. Odstavec konèí východovou øádkou. KaŸdá vìta zaèíná velkým písmenem, nesmí zaèínat èíslicí.
+
+Zvýraznìní barvou, podtrŸením, ani zmìnou písma se v odstavcích nepouŸívá. Hladká sazba je urèena pøedev¹ím pro del¹í texty, jako je beletrie. Poru¹ení konzistence sazby pùsobí v textu ru¹ivì a unavuje ètenáøùv zrak.
+
+
+Smí¹ená sazba
+
+Smí¹ená sazba má volnìj¹í pravidla. Klasická hladká sazba se doplòuje o dal¹í øezy písma pro zvýraznìní dùleŸitých pojmù. Existuje "pravidlo":
+
+Èím více druhù, øezù, velikostí, barev písma a jiných efektù pouŸijeme, tím profesionálnìji bude dokument vypadat. Ètenáø bude nad¹en!
+
+Tímto pravidlem se nikdy nesmíme øídit. Pøíli¹ èasté zvýrazòování textových elementù a zmìny velikosti písma jsou známkou amatérismu autora a pùsobí velmi ru¹ivì. Dobøe navrŸený dokument nemá obsahovat více neŸ 4 øezy èi druhy písma. Dobøe navrŸený dokument je decentní, ne chaotický.
+
+DùleŸitým znakem správnì vysázeného dokumentu je konzistence - napøíklad tuèný øez písma vyhradíme pouze pro klíèová slova, sklonìný øez pouze pro doposud neznámé pojmy a nebudeme to míchat. Sklonìný øez nepùsobí tak ru¹ivì a pouŸívá se èastìji. V LaTeXu jej sázíme radìji pøíkazem \emph{text} neŸ \textit{text}.
+
+Smí¹ená sazba se nejèastìji pouŸívá pro sazbu vìdeckých èlánkù a technických zpráv. U del¹ích dokumentù vìdeckého èi technického charakteru je zvykem vysvìtlit význam rùzných typù zvýraznìní v úvodní kapitole.
+
+
+Dal¹í rady:
+
+Nadpis nesmí konèit dvojteèkou a nesmí obsahovat odkazy na obrázky, citace, poznámky pod èarou, ...
+
+Nadpisy, èíslování a odkazy na èíslované elementy musí být sázeny pøíkazy k tomu urèenými. Maximálnì vyuŸíváme moŸností LaTeXu a zvolené tøídy dokumentu.
+
+Výèet ani obrázek nesmí zaèínat hned pod nadpisem a nesmí tvoøit celou kapitolu.
+
+Poznámky pod èarou pouŸívejte opravdu støídmì. (©etøete i s textem v závorkách.)
+
+NepouŸívejte velké mnoŸství malých obrázkù. ZvaŸte, zda je nelze seskupit.
+
+Bezchybným pravopisem a sazbou dáváme najevo úctu ke ètenáøi. Odbytý text s chybami bude ètenáø právem povaŸovat za nedùvìryhodný.
+
+
+Èeské odli¹nosti
+
+Èeská sazba se oproti okolnímu svìtu v nìkterých aspektech mírnì li¹í. Jednou z odli¹ností je sazba uvozovek. Uvozovky se v èe¹tinì pouŸívají pøeváŸnì pro zobrazení pøímé øeèi, zvýraznìní pøezdívek a ironie. V èe¹tinì se pouŸívají uvozovky typu "9966" místo anglických "uvozovek" nebo dvojitých "uvozovek". Lze je sázet pøipravenými pøíkazy nebo pøi pouŸití UTF-8 kódování i pøímo. Obì moŸnosti mají své výhody i úskalí.
+
+Ve smí¹ené sazbì se øez uvozovek øídí øezem prvního uvozovaného slova. Pokud je uvozována celá vìta, sází se koncová teèka pøed uvozovku, pokud se uvozuje slovo nebo èást vìty, sází se teèka za uvozovku.
+
+Druhou odli¹ností je pravidlo pro sázení koncù øádkù. V èeské sazbì by øádek nemìl konèit osamocenou jednopísmennou pøedloŸkou nebo spojkou. Spojkou "a" konèit mùŸe pouze pøi sazbì do ¹íøky 25 liter. Abychom LaTeXu zabránili v sázení osamocených pøedloŸek, spojujeme je s následujícím slovem nezlomitelnou mezerou. Tu sázíme pomocí znaku ~ (vlnka, tilda). Pro systematické doplnìní vlnek slouŸí volnì ¹iøitelný program vlna od pana Ol¹áka.
+
+Principiálnì lep¹í øe¹ení nabízí balík encxvlna, od pánù Ol¹áka a Wagnera. Pro jeho pouŸití je ov¹em potøeba speciální konfigurace LaTeXu.
+
+
+Závìr
+
+Jistì jste postøehli, Ÿe tento dokument obsahuje schválnì nìkolik typografických prohøe¹kù. Sekce ?? a ?? obsahují typografické chyby. V kontextu celého textu je jistì snadno najdete. Je dobré znát moŸnosti LaTeXu, ale je také nutné vìdìt, kdy je nepouŸít.
+
+---
+1 Pøíli¹ mnoho poznámek pod èarou ètenáøe zbyteènì rozptyluje.
+2 Viz ftp://math.feld.cvut.cz/pub/olsak/vlna/
+3 Viz http://tug.ctan.org/pkg/encxvlna
