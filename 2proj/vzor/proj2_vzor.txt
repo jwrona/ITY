@@ -1,0 +1,167 @@
+Základní informace o dokumentu
+------------------------------
+rozměry stránky: A4
+rozměry textové oblasti: 18x25cm
+mezera vlevo: 1.5cm
+mezera nahoře: 2.5cm
+font: standardní 11pt (vzorový dokument používá kódování fontů T1)
+
+Poznámky: 
+- Na titulní straně uveďte své jméno a aktuální datum (pomocí vhodného příkazu).
+- Pomlčky a spojovníky jsou v tomto textu zadány znakem -. V dokumentu musí být
+  správná šířka podle kontextu.
+- Vzorový dokument byl vysázen LaTeXem na školním serveru merlin těmito
+  nástroji: latex, dvips -t a4, ps2pdf
+  
+  Při použití pdflatexu je výsledný soubor vizuálně totožný, ale je dvakrát
+  větší.
+
+- Vzorce a některé další elementy jsou v tomto textu nahrazeny třemi tečkami.
+- V definici 3.1 je použito prostředí description* z balíku mdwlist.
+- Z AmS balíků byly použity příkazy \newtheorem a \binom, plus další příkazy
+  pro sázení speciálních symbolů.
+- Návěští definic, algoritmů, vět a důkazů, dále číslování nadpisů a vzorců,
+  stejně jako vytváření odkazů na ně je potřeba sázet pomocí vhodných LaTeXových
+  prostředků, nikoli ručně.
+
+
+Text k vysázení
+---------------
+
+Vysoké učení technické v Brně
+Fakulta informačních technologií
+
+Typografie a publikování - 2. projekt
+
+Sazba dokumentů s matematickými výrazy
+
+
+Jméno Příjmení          Aktuální datum
+
+1 Úvod
+
+Tato úloha je zaměřena na sazbu titulní strany a textů, které obsahují
+matematické vzorce, rovnice (...), prostředí (například definice ... na straně
+...).
+
+Na titulní straně je využito sázení nadpisu podle optického středu s využitím
+zlatého řezu. Tento postup byl probírán na přednášce. Pro sazbu matematických
+elementů byly využity balíky AmS-LaTeXu.
+
+
+2 Plynulý matematický text
+
+Zásady pro sazbu matematiky v plynulém textu odpovídají zásadám pro smíšenou
+sazbu.
+
+Pro množinu ... označuje ... kardinalitu .... Pro množinu ... reprezentuje ...
+volný monoid generovaný množinou ... s operací konkatenace. Prvek identity ve
+volném monoidu ... značíme symbolem .... Nechť .... Algebraicky je tedy ...
+volná pologrupa generovaná množinou ... s operací konkatenace. Konečnou
+neprázdnou množinu ... nazvěme abeceda. Pro ... označuje ... délku řetězce ....
+Pro ... označuje ... počet výskytů symbolů z ... v řetězci ... a ... určuje
+...-tý symbol řetězce ...; například ....
+
+
+3 Sazba definic a vět
+
+Pro sazbu definic a vět slouží balík amsthm.
+
+Definice 3.1. Bezkontextová gramatika je čtveřice ..., kde
+
+... je totální abeceda,
+... je abeceda terminálů,
+... je startující symbol,
+... je konečná množina pravidel tvaru ..., kde ..., ... a ... je návěští tohoto
+pravidla.
+
+Nechť ... značí abecedu neterminálů. Pokud ..., ..., ... provádí derivační krok
+z ... do ... podle pravidla ..., symbolicky píšeme ... nebo zjednodušeně ....
+Standardním způsobem definujeme ..., kde .... Dále definujeme tranzitivní uzávěr
+... a tranzitivně-reflexivní uzávěr ....
+
+
+Algoritmus můžeme uvádět textově, podobně jako definice, nebo lze použít
+pseudokódu vysázeného ve vhodném prostředí (například algorithm2e).
+
+Algoritmus 3.2. Ověření bezkontextovosti gramatiky. Mějme gramatiku ....
+1. Pro každé pravidlo ... proveď test, zda ... na levé straně obsahuje právě
+jeden symbol z ....
+2. Pokud všechna pravidla splňují podmínku z kroku ..., tak je gramatika ...
+bezkontextová.
+
+
+Definice 3.3. Jazyk definovaný gramatikou ... definujeme jako ....
+
+
+3.1 Podsekce obsahující větu
+Věty a definice mohou mít vzájemně nezávislé číslování. Důkaz se obvykle uvádí
+hned za větou.
+
+Definice 3.4. Nechť ... je libovolný jazyk. ... je bezkontextový jazyk,
+když a jen když ..., kde ... je libovolná bezkontextová gramatika.
+
+Definice 3.5. Množinu ... nazýváme třídou bezkontextových jazyků.
+
+Věta 1. Nechť .... Platí, že ....
+
+Důkaz. Důkaz se provede pomocí Pumping lemma pro bezkontextové jazyky a je
+zřejmý, což implikuje pravdivost věty ....
+
+
+4. Rovnice a odkazy
+
+Složitější matematické formulace sázíme mimo plynulý text. Lze umístit několik
+výrazů na jeden řádek, ale pak je třeba tyto vhodně oddělit, například příkazem
+\quad.
+
+...
+
+V rovnici (...) jsou využity tři typy závorek s různou explicitně
+definovanou velikostí.
+
+...
+
+V této větě vidíme, jak vypadá implicitní vysázení limity ... v normálním
+odstavci textu. Podobně je to i s dalšími symboly jako ... či .... V případě
+vzorce ... jsme si vynutili méně úspornou sazbu příkazem \limits.
+
+...
+
+
+5 Složené zlomky
+
+Při sázení složených zlomků dochází ke zmenšování použitého písma v čitateli a
+jmenovateli. Toto chování není vždy žádoucí, protože některé zlomky potom mohou
+být obtížně čitelné.
+
+V těchto případech je možné nastavit standardní stupeň písma v podvýrazech
+ručně pomocí příkazu \displaystyle u vysázených vzorců nebo pomocí \textstyle u
+vzorců, které jsou součástí textu. Srovnejte:
+
+...
+
+Tento postup lze použít nejen u zlomků.
+
+...
+
+
+6 Matice
+
+Pro sázení matic se velmi často používá prostředí array a závorky (\left,
+\right). Tyto příkazy vždy tvoří pár a nelze je použít samostatně.
+
+...
+
+Prostředí array lze úspěšně využít i jinde.
+
+...
+
+
+7 Závěrem
+
+V případě, že budete potřebovat vyjádřit matematickou konstrukci nebo symbol a
+nebude se Vám dařit jej nalézt v samotném LaTeXu, doporučuji prostudovat
+možnosti balíku maker AmS-LaTeX. Analogická poučka platí obecně pro jakoukoli
+konstrukci v TeXu.
+
